@@ -1,6 +1,7 @@
 <h2> Here are all the outfits </h2>
 
 <ol>
-  <li> <%= link_to(@outfits.name, outfits_path %> </li>
-
+  <% @outfits.each do |outfit| %>
+  <li> <%= link_to(outfit.name, outfit_path(outfit)) %> </li>
+  <%end%>
 </ol>

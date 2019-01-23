@@ -11,8 +11,8 @@ blair = User.create(username: "bc0123", password: "cookies", email: "bc123@yahoo
 andy = User.create(username: "and0123", password: "cookies2", email: "and123@yahoo.com", image: "/Users/blaircarroll/labs/mod2/mod-2-project/mod2/app/assets/images/funnyquant.jpg", first_name: "andy", last_name: "warhol")
 
 
-occassion1 = Occasion.create(name: "formal")
-occassion2 = Occasion.create(name: "super casual")
+occasion1 = Occasion.create(name: "formal")
+occasion2 = Occasion.create(name: "super casual")
 
 outfit1 = Outfit.create(name: "my most favoritest fit shawty", rating: 5, user_id: 1, occasion_id: 1)
 outfit2 = Outfit.create(name: "its so so", rating: 3, user_id: 2, occasion_id: 2)

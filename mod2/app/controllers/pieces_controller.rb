@@ -13,6 +13,7 @@ class PiecesController < ApplicationController
   end
 
   def create
+    byebug
     @piece = Piece.new(piece_params)
     if @piece.valid?
       @piece.save
@@ -20,6 +21,7 @@ class PiecesController < ApplicationController
     else
       render :new
     end
+
   end
 
   def edit
@@ -44,7 +46,7 @@ class PiecesController < ApplicationController
   private
 
   def piece_params
-    params.require(:piece).permit(:name, :clean_lvl, :color, :image, :user_id, :category_id)
+    params.require(:piece).permit(:name, :clean_lvl, :color, :image)
   end
 
 end
