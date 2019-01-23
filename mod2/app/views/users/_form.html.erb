@@ -1,2 +1,15 @@
-<%= form_for(@users) %>
-<%= %>
+<%= form_for(@users) do |f| %>
+<%= f.label "Username:" %>
+<%= f.text_field :username %>
+<%= f.label "Password:" %>
+<%= f.text_field :password %>
+<%= f.label "Email:" %>
+<%= f.text_field :email %>
+<%= f.label "Image:" %>
+<%= f.text_field :image %>
+<%= f.label "First name:" %>
+<%= f.text_field :first_name %>
+<%= f.label "Last name:" %>
+<%= f.text_field :last_name %>
+<%= f.submit %>
+<% end %>
