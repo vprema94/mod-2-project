@@ -1,10 +1,4 @@
 class UsersController < ApplicationController
-  username
-  password
-  email
-  image
-  first_name
-  last_name
 
   def index
     @users = User.all
@@ -41,11 +35,11 @@ class UsersController < ApplicationController
     end
   end
 
-  def destroy
-    @user = User.find(params[:id])
-    @user.destroy
-    redirect_to users_path
-  end
+  # def destroy
+  #   @user = User.find(params[:id])
+  #   @user.destroy
+  #   redirect_to users_path
+  # end
 
   private
 
