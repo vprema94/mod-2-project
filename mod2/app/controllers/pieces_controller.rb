@@ -14,10 +14,8 @@ class PiecesController < ApplicationController
   end
 
   def create
-    byebug
     @piece = Piece.new(piece_params)
     @categories = Category.all
-    @piece.clean_lvl = 0
     if @piece.valid?
       @piece.save
       redirect_to piece_path(@piece)

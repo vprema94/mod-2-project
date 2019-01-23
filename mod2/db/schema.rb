@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_23_204030) do
+ActiveRecord::Schema.define(version: 2019_01_23_222439) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2019_01_23_204030) do
 
   create_table "pieces", force: :cascade do |t|
     t.string "name"
-    t.integer "clean_lvl"
+    t.integer "clean_lvl", default: 0
     t.string "color"
     t.string "image"
     t.integer "category_id"
