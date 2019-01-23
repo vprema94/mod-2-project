@@ -14,5 +14,8 @@ andy = User.create(username: "and0123", password: "cookies2", email: "and123@yah
 occasion1 = Occasion.create(name: "formal")
 occasion2 = Occasion.create(name: "super casual")
 
-outfit1 = Outfit.create(name: "my most favoritest fit shawty", rating: 5, user_id: 1, occasion_id: 1)
-outfit2 = Outfit.create(name: "its so so", rating: 3, user_id: 2, occasion_id: 2)
+outfit1 = Outfit.create(name: "my most favoritest fit shawty", rating: 5, occasion_id: 1)
+outfit2 = Outfit.create(name: "its so so", rating: 3, occasion_id: 2)
+
+category1 = Category.create(name: "top")
+category2 = Category.create(name: "bottoms")

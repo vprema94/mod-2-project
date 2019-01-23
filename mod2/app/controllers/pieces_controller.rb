@@ -10,11 +10,14 @@ class PiecesController < ApplicationController
 
   def new
     @piece = Piece.new
+    @categories = Category.all
   end
 
   def create
     byebug
     @piece = Piece.new(piece_params)
+    @categories = Category.all
+    @piece.clean_lvl = 0
     if @piece.valid?
       @piece.save
       redirect_to piece_path(@piece)
@@ -33,7 +36,7 @@ class PiecesController < ApplicationController
     if @piece.update(piece_params)
       redirect_to piece_path(@piece)
     else
-      redirect_to edit_piece_path
+      render :edit
     end
   end
 
@@ -46,7 +49,7 @@ class PiecesController < ApplicationController
   private
 
   def piece_params
-    params.require(:piece).permit(:name, :clean_lvl, :color, :image)
+    params.require(:piece).permit(:name, :clean_lvl, :color, :image, :category_id)
   end
 
 end

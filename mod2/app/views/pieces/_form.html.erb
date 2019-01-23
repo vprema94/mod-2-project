@@ -5,7 +5,6 @@
 <%= f.text_field :color %>
 <%= f.label "Image:" %>
 <%= f.text_field :image %>
-<%= f.label "Cleanliness:" %>
-<%= f.number_field :clean_lvl %>
+<%= f.collection_select :category_id, @categories, :id, :name %>
 <%= f.submit %>
 <% end %>
