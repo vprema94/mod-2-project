@@ -35,6 +35,12 @@ class PiecesController < ApplicationController
     end
   end
 
+  def destroy
+    @piece = Piece.find(params[:id])
+    @piece.destroy
+    redirect_to pieces_path
+  end
+
   private
 
   def piece_params

@@ -1,10 +1,4 @@
 class UsersController < ApplicationController
-  username
-  password
-  email
-  image
-  first_name
-  last_name
 
   def index
     @users = User.all

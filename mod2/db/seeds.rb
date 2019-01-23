@@ -8,10 +8,3 @@
 
 blair = User.create(username: "bc0123", password: "cookies", email: "bc123@yahoo.com", image: "funnyquant.jpeg", first_name: "blair", last_name: "caro")
 andy = User.create(username: "and0123", password: "cookies2", email: "and123@yahoo.com", image: "funnyquant.jpeg", first_name: "andy", last_name: "warhol")
-
-username
-password
-email
-image
-first_name
-last_name
