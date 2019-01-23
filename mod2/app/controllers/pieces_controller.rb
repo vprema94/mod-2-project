@@ -18,7 +18,7 @@ class PiecesController < ApplicationController
       @piece.save
       redirect_to piece_path(@piece)
     else
-      redirect_to new_piece_path
+      render :new
     end
   end
 
