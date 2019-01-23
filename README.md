@@ -17,4 +17,6 @@ Closet Application for Module 2
     
 -	User Login
 
+- Random outfit generator
+
 -	Cool ass CSS
