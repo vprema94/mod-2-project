@@ -1,0 +1,10 @@
+<h1>Welcome to your awesome closet!</h1>
+
+<ul>
+  <% @pieces.each do |piece| %>
+  <li>
+    <%= piece.name %>
+  </li>
+  <br>
+  <% end %>
+</ul>

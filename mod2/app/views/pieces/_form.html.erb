@@ -1,0 +1,11 @@
+<%= form_for(@piece) do |f| %>
+<%= f.label "Title:" %>
+<%= f.text_field :name %>
+<%= f.label "Color" %>
+<%= f.text_field :color %>
+<%= f.label "Image:" %>
+<%= f.text_field :image %>
+<%= f.label "Cleanliness:" %>
+<%= f.number_field :clean_lvl %>
+<%= f.submit %>
+<% end %>
