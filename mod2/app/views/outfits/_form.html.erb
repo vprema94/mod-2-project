@@ -1,7 +1,15 @@
 <%= form_for(@outfit) do |f| %>
-<%= f.label "Name" %>
-<%= f.text_field :name %>
-<%= f.label "Rating"%>
-<%= f.number_field :rating %>
-<%= f.submit %>
+<p>Outfit Name:</p>
+    <%= f.text_field :name %><br /><br />
+    <p>Rating:</p>
+    <%= f.number_field :rating %><br /><br />
+<%= f.fields_for :clothing_outfits do |co| %>
+  <p>Your Tops:</p>
+    <%= co.collection_check_boxes :piece_id, @pieces, :id, :name do |b|
+        b.label {b.check_box + image_tag(b.object.image, height: 150)} end %><br><br /><br />
+  <%= co.submit class: "btn btn-primary"%>
+  <br /><br />
+  <% end %>
 <% end %>
+
+
