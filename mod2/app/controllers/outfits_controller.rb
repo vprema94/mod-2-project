@@ -13,6 +13,13 @@ class OutfitsController < ApplicationController
   def new
     @outfit = Outfit.new
     @pieces = current_user.pieces
+    @tops = @pieces.where("category_id = 1")
+    @bottoms = @pieces.where("category_id = 2")
+    @dr = @pieces.where("category_id = 3")
+    @suits = @pieces.where("category_id = 4")
+    @cj = @pieces.where("category_id = 5")
+    @shoes = @pieces.where("category_id = 6")
+    @acc = @pieces.where("category_id = 7")
     @occasions = Occasion.all
   end
 
@@ -20,7 +27,7 @@ class OutfitsController < ApplicationController
     @outfit = Outfit.new(outfit_params)
     @outfit.user_id = session[:user_id]
     @clothing = params["outfit"]["clothing_outfits"]["piece_id"].reject!(&:blank?)
-    byebug
+    
     if @outfit.valid?
       @outfit.save
       @clothing.each do |id|

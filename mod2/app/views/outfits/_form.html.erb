@@ -6,9 +6,27 @@
     <p>Occasion:</p>
     <%= f.collection_select :occasion_id, @occasions, :id, :name %><br /><br />
 <%= f.fields_for :clothing_outfits do |co| %>
-  <p>Your Clothes:</p>
-    <%= co.collection_check_boxes :piece_id, @pieces, :id, :name do |b|
+  <p>Your Tops:</p>
+    <%= co.collection_check_boxes :piece_id, @tops, :id, :name do |b|
         b.label {b.check_box + image_tag(b.object.image, height: 200)} end %><br><br /><br />
+<p>Your Bottoms:</p>
+    <%= co.collection_check_boxes :piece_id, @bottoms, :id, :name do |b|
+        b.label {b.check_box + image_tag(b.object.image, height: 200)} end %><br><br /><br />
+<p>Your Dresses & Rompers:</p>
+    <%= co.collection_check_boxes :piece_id, @dr, :id, :name do |b|
+        b.label {b.check_box + image_tag(b.object.image, height: 200)} end %><br><br /><br />    
+<p>Your Suits:</p>
+    <%= co.collection_check_boxes :piece_id, @suits, :id, :name do |b|
+        b.label {b.check_box + image_tag(b.object.image, height: 200)} end %><br><br /><br /> 
+<p>Your Coats & Jackets:</p>
+    <%= co.collection_check_boxes :piece_id, @cj, :id, :name do |b|
+        b.label {b.check_box + image_tag(b.object.image, height: 200)} end %><br><br /><br />  
+<p>Your Shoes:</p>
+    <%= co.collection_check_boxes :piece_id, @shoes, :id, :name do |b|
+        b.label {b.check_box + image_tag(b.object.image, height: 200)} end %><br><br /><br />     
+<p>Your Accessories:</p>
+    <%= co.collection_check_boxes :piece_id, @acc, :id, :name do |b|
+        b.label {b.check_box + image_tag(b.object.image, height: 200)} end %><br><br /><br />                            
   <%= co.submit "SUBMIT", class: "btn btn-primary"%>
   <br /><br />
   <% end %>
