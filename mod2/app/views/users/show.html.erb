@@ -1,10 +1,9 @@
-<h5>Welcome Back <%= @user.first_name %>!</h5>
-
-
 <h1><%= @user.first_name.capitalize + " " + @user.last_name.capitalize %></h1>
 
 <%= image_tag @user.image %>
 
-<p>Would you like to add clothes to your closet?</p>
-<p>Want to make an outfit?</p>
+<p>Would you like to add clothes to your closet <%= link_to(@user.first_name, new_piece_path) %> ?</p>
+<p>Want to make an <%= link_to("outfit", new_outfit_path) %> ?</p>
 <p>Edit user profile, <%= link_to(@user.email, edit_user_path(@user))%></p>
+
+<p><%= link_to("Home", users_path) %></p>

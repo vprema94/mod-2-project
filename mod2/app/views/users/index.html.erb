@@ -1,3 +1,14 @@
 <h1>Welcome to your awesome closet!</h1>
 
+<% if session[:user_id] %>
+<p> <%= link_to("Profile", user_path(@user)) %> </p>
+<% else %>
+<% nil %>
+<% end %>
+
+
+<% if session[:user_id] %>
+<h4>Love your self</h4>
+<% else %>
 <h4>Sign in to pick or create an outfit!</h4>
+<% end %>

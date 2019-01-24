@@ -1,5 +1,7 @@
 class OutfitsController < ApplicationController
 
+  before_action :authorize!, only: [:new, :edit, :create, :update]
+
   def show
     @outfit = Outfit.find(params[:id])
   end
