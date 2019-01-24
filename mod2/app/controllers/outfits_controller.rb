@@ -12,12 +12,21 @@ class OutfitsController < ApplicationController
 
   def new
     @outfit = Outfit.new
+    @pieces = current_user.pieces
   end
 
   def create
     @outfit = Outfit.new(outfit_params)
+    @outfit.user_id = session[:user_id]
+    @outfit.occasion = Occasion.first
+    @clothing = params["outfit"]["clothing_outfits"]["piece_id"].reject!(&:blank?)
+  
     if @outfit.valid?
       @outfit.save
+      @clothing.each do |id|
+        piece = Piece.find(id)
+        @outfit.pieces << piece
+      end
       redirect_to outfit_path(@outfit)
     else
       redirect_to new_outfit_path
@@ -46,7 +55,7 @@ class OutfitsController < ApplicationController
   private
 
   def outfit_params
-    params.require(:outfit).permit(:name, :rating, :user_id, :occassion_id)
+    params.require(:outfit).permit(:name, :rating, :user_id, :occassion_id, :piece_id => [])
   end
 
 end

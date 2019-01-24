@@ -1,18 +1,106 @@
 <h1>Welcome to your awesome closet!</h1>
 
 <ul>
-  <% @pieces.each do |piece| %>
+  <% @tops.each do |top| %>
   <li>
-    <%= piece.name %>
+    <%= top.name %>
   </li>
   <li>
-    <%= piece.color %>
+    <%= top.color %>
   </li>
   <li>
-    <%= piece.category.name %>
+    <%= image_tag top.image %>
+  </li>
+  <br>
+  <% end %>
+</ul>
+
+<ul>
+  <% @bottoms.each do |bottom| %>
+  <li>
+    <%= bottom.name %>
   </li>
   <li>
-    <%= image_tag piece.image %>
+    <%= bottom.color %>
+  </li>
+  <li>
+    <%= image_tag bottom.image %>
+  </li>
+  <br>
+  <% end %>
+</ul>
+
+
+<ul>
+  <% @dr.each do |item| %>
+  <li>
+    <%= item.name %>
+  </li>
+  <li>
+    <%= item.color %>
+  </li>
+  <li>
+    <%= image_tag item.image %>
+  </li>
+  <br>
+  <% end %>
+</ul>
+
+<ul>
+  <% @suits.each do |suit| %>
+  <li>
+    <%= suit.name %>
+  </li>
+  <li>
+    <%= suit.color %>
+  </li>
+  <li>
+    <%= image_tag suit.image %>
+  </li>
+  <br>
+  <% end %>
+</ul>
+
+<ul>
+  <% @cj.each do |item| %>
+  <li>
+    <%= item.name %>
+  </li>
+  <li>
+    <%= item.color %>
+  </li>
+  <li>
+    <%= image_tag item.image %>
+  </li>
+  <br>
+  <% end %>
+</ul>
+
+<ul>
+  <% @shoes.each do |item| %>
+  <li>
+    <%= item.name %>
+  </li>
+  <li>
+    <%= item.color %>
+  </li>
+  <li>
+    <%= image_tag item.image %>
+  </li>
+  <br>
+  <% end %>
+</ul>
+
+<ul>
+  <% @acc.each do |item| %>
+  <li>
+    <%= item.name %>
+  </li>
+  <li>
+    <%= item.color %>
+  </li>
+  <li>
+    <%= image_tag item.image %>
   </li>
   <br>
   <% end %>
