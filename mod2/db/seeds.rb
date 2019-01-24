@@ -1,18 +1,166 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+blair = User.create(username: "bc0123", password: "cookies", email: "bc123@yahoo.com", image: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/what-do-the-snapchat-emojis-mean-5-1521645514.jpg", first_name: "Blair", last_name: "Carroll")
 
-blair = User.create(username: "bc0123", password: "cookies", email: "bc123@yahoo.com", image: "/Users/blaircarroll/labs/mod2/mod-2-project/mod2/app/assets/images/funnyquant.jpg", first_name: "blair", last_name: "caro")
-#
-andy = User.create(username: "and0123", password: "cookies2", email: "and123@yahoo.com", image: "/Users/blaircarroll/labs/mod2/mod-2-project/mod2/app/assets/images/funnyquant.jpg", first_name: "andy", last_name: "warhol")
+vanessa = User.create(username: "vprema", password: "maximus1", email: "vprema94@gmail.com", image: "https://www.gannett-cdn.com/presto/2018/11/01/USAT/788eaad4-8c20-4a46-92ff-f6df41d4813d-DrunkEmoji3110.jpg?crop=967,542,x0,y31&width=3200&height=1680&fit=bounds", first_name: "Vanessa", last_name: "Prema")
+
+occassion1 = Occasion.create(name: "Sport")
+occassion2 = Occasion.create(name: "Casual")
+occassion3 = Occasion.create(name: "Business Casual")
+occassion4 = Occasion.create(name: "Business Formal")
+occassion5 = Occasion.create(name: "Festive")
+occassion6 = Occasion.create(name: "Semiformal")
+occassion7 = Occasion.create(name: "Formal")
+
+category1 = Category.create(name: "Tops")
+category2 = Category.create(name: "Bottoms")
+category3 = Category.create(name: "Dresses/Rompers")
+category4 = Category.create(name: "Suits")
+category5 = Category.create(name: "Coats/Jackets")
+category6 = Category.create(name: "Shoes")
+category7 = Category.create(name: "Accessories")
+
+#Women Tops
+top1 = Piece.create(name: "Assymetric Jumper", color: "White", image: "top1.jpg", category_id: 1)
+top2 = Piece.create(name: "Sleek Turtle-Neck", color: "Grey", image: "top2.jpg", category_id: 1)
+top3 = Piece.create(name: "Crop Top", color: "White", image: "top3.jpg", category_id: 1)
+top4 = Piece.create(name: "Buckle Wrap Shirt", color: "Green", image: "top4.jpg", category_id: 1)
+top5 = Piece.create(name: "Double Pocket Shirt", color: "Peach", image: "top5.jpg", category_id: 1)
+top6 = Piece.create(name: "Snake Print Blouse", color: "Teal", image: "top6.jpg", category_id: 1)
+top7 = Piece.create(name: "LZ T-Shirt", color: "Black", image: "top7.jpg", category_id: 1)
+top8 = Piece.create(name: "Long Sleeve Crop", color: "Pink", image: "top8.jpg", category_id: 1)
+top9 = Piece.create(name: "Denim Shirt", color: "Blue", image: "top9.jpg", category_id: 1)
+top10 = Piece.create(name: "Pleated Blouse", color: "Blue", image: "top10.jpg", category_id: 1)
+
+#Men Tops
+top11 = Piece.create(name: "Turtle-Neck Sweater", color: "Burgundy", image: "top11.jpg", category_id: 1)
+top12 = Piece.create(name: "Ribbed Jumper", color: "Navy", image: "top12.jpg", category_id: 1)
+top13 = Piece.create(name: "Revere Shirt", color: "White", image: "top13.jpg", category_id: 1)
+top14 = Piece.create(name: "Dress Shirt", color: "Blue", image: "top14.jpg", category_id: 1)
+top15 = Piece.create(name: "Floral Shirt", color: "Navy", image: "top15.jpg", category_id: 1)
+top16 = Piece.create(name: "Demin Shirt", color: "Blue", image: "top16.jpg", category_id: 1)
+top17 = Piece.create(name: "Khaki Shirt", color: "Green", image: "top17.jpg", category_id: 1)
+top18 = Piece.create(name: "T-Shirt", color: "Burgundy", image: "top18.jpg", category_id: 1)
+top19 = Piece.create(name: "Quarter Zip Knit", color: "Beige", image: "top19.jpg", category_id: 1)
+top20 = Piece.create(name: "Long Sleeve T-Shirt", color: "White", image: "top20.jpg", category_id: 1)
+
+top21 = Piece.create(name: "Sweatshirt", color: "White", image: "top21.jpg", category_id: 1)
+
+#Women Bottoms
+bottom1 = Piece.create(name: "Light Mom Jeans", color: "Blue", image: "bottom1.jpg", category_id: 2)
+bottom2 = Piece.create(name: "Skinny Jeans", color: "Black", image: "bottom2.jpg", category_id: 2)
+bottom3 = Piece.create(name: "Block Jeans", color: "Black", image: "bottom3.jpg", category_id: 2)
+bottom4 = Piece.create(name: "Flowy Shorts", color: "Black", image: "bottom4.jpg", category_id: 2)
+bottom5 = Piece.create(name: "Denim Shorts", color: "Blue", image: "bottom5.jpg", category_id: 2)
+bottom6 = Piece.create(name: "Denim Skirt", color: "Blue", image: "bottom6.jpg", category_id: 2)
+bottom7 = Piece.create(name: "Boucle Skirt", color: "Pink", image: "bottom7.jpg", category_id: 2)
+bottom8 = Piece.create(name: "Houndstooth Trousers", color: "Black", image: "bottom8.jpg", category_id: 2)
+bottom9 = Piece.create(name: "Trousers", color: "Black", image: "bottom9.jpg", category_id: 2)
+bottom10 = Piece.create(name: "Joggers", color: "Green", image: "bottom10.jpg", category_id: 2)
+
+#Men Bottoms
+bottom11 = Piece.create(name: "Skinny Jeans", color: "Black", image: "bottom11.jpg", category_id: 2)
+bottom12 = Piece.create(name: "Jeans", color: "Grey", image: "bottom12.jpg", category_id: 2)
+bottom13 = Piece.create(name: "Raw Hem Jeans", color: "Blue", image: "bottom13.jpg", category_id: 2)
+bottom14 = Piece.create(name: "Jeans", color: "Blue", image: "bottom14.jpg", category_id: 2)
+bottom15 = Piece.create(name: "Chinos", color: "Black", image: "bottom15.jpg", category_id: 2)
+bottom16 = Piece.create(name: "Chinos", color: "Charcoal", image: "bottom16.jpg", category_id: 2)
+bottom17 = Piece.create(name: "Chinos", color: "Green", image: "bottom17.jpg", category_id: 2)
+bottom18 = Piece.create(name: "Joggers", color: "Charcoal", image: "bottom18.jpg", category_id: 2)
+bottom19 = Piece.create(name: "Chino Shorts", color: "Navy", image: "bottom19.jpg", category_id: 2)
+bottom20 = Piece.create(name: "Jersey Shorts", color: "Grey", image: "bottom20.jpg", category_id: 2)
+
+#Women Dresses/Rompers
+dr1 = Piece.create(name: "Slouchy Romper", color: "Black", image: "dr1.jpg", category_id: 3)
+dr2 = Piece.create(name: "Demin Romper", color: "Denim", image: "dr2.jpg", category_id: 3)
+dr3 = Piece.create(name: "Boiler Jumpsuit", color: "Grey", image: "dr3.jpg", category_id: 3)
+dr4 = Piece.create(name: "Buckle Dress", color: "Coral", image: "dr4.jpg", category_id: 3)
+dr5 = Piece.create(name: "Ribbed Sweater Bodycon", color: "Grey", image: "dr5.jpg", category_id: 3)
+dr6 = Piece.create(name: "Ribbed Bodycon", color: "Pink", image: "dr6.jpg", category_id: 3)
+dr7 = Piece.create(name: "Wrap Dress", color: "Green", image: "dr7.jpg", category_id: 3)
+dr8 = Piece.create(name: "Slip Dress", color: "Orange", image: "dr8.jpg", category_id: 3)
+dr9 = Piece.create(name: "Funnel Neck Dress", color: "Orange", image: "dr9.jpg", category_id: 3)
+dr10 = Piece.create(name: "Long Sleeve Belt Dress", color: "Burgundy", image: "dr10.jpg", category_id: 3)
+
+#Men Suits
+suit1 = Piece.create(name: "Tartan Suit", color: "Tan", image: "suit1.jpg", category_id: 4)
+suit2 = Piece.create(name: "Pinstripe Suit", color: "Charcoal", image: "suit2.jpg", category_id: 4)
+suit3 = Piece.create(name: "Checkered Suit", color: "Grey", image: "suit3.jpg", category_id: 4)
+suit4 = Piece.create(name: "Windowpane Suit", color: "Navy", image: "suit4.jpg", category_id: 4)
+suit5 = Piece.create(name: "Tailored Suit", color: "Charcoal", image: "suit5.jpg", category_id: 4)
+
+#Women Coats/Jackets
+cj1 = Piece.create(name: "Textured Boucle Jacket", color: "Pink", image: "cj1.jpg", category_id: 5)
+cj2 = Piece.create(name: "Faux Fur Coat", color: "Beige", image: "cj2.jpg", category_id: 5)
+cj3 = Piece.create(name: "Puffy Jacket", color: "Navy", image: "cj3.jpg", category_id: 5)
+cj4 = Piece.create(name: "Tartan Coat", color: "Tan", image: "cj4.jpg", category_id: 5)
+cj5 = Piece.create(name: "Denim Jacket", color: "Blue", image: "cj5.jpg", category_id: 5)
+cj6 = Piece.create(name: "Long Coat", color: "Tan", image: "cj6.jpg", category_id: 5)
+cj7 = Piece.create(name: "Borg Jacket", color: "Brown", image: "cj7.jpg", category_id: 5)
+cj8 = Piece.create(name: "Bomber Jacket", color: "Black", image: "cj8.jpg", category_id: 5)
+cj9 = Piece.create(name: "Windbreaker", color: "Grey", image: "cj9.jpg", category_id: 5)
+cj10 = Piece.create(name: "Metallic Rain Jacket", color: "Gold", image: "cj10.jpg", category_id: 5)
+cj11 = Piece.create(name: "Hoodie", color: "Mint", image: "cj11.jpg", category_id: 5)
+
+#Men Coats/Jackets
+cj12 = Piece.create(name: "Trench Coat", color: "Tan", image: "cj12.jpg", category_id: 5)
+cj13 = Piece.create(name: "Bomber Jacket", color: "Navy", image: "cj13.jpg", category_id: 5)
+cj14 = Piece.create(name: "Jacket", color: "Brown", image: "cj14.jpg", category_id: 5)
+cj15 = Piece.create(name: "Denim Jacket", color: "Blue", image: "cj15.jpg", category_id: 5)
+cj16 = Piece.create(name: "Puffy Jacket", color: "Navy", image: "cj16.jpg", category_id: 5)
+cj17 = Piece.create(name: "Long Coat", color: "Grey", image: "cj17.jpg", category_id: 5)
+cj18 = Piece.create(name: "Borg Jacket", color: "Navy", image: "cj18.jpg", category_id: 5)
+cj19 = Piece.create(name: "Windbreaker", color: "Navy", image: "cj19.jpg", category_id: 5)
+cj20 = Piece.create(name: "Leather Jacket", color: "Brown", image: "cj20.jpg", category_id: 5)
+cj21 = Piece.create(name: "Rain Jacket", color: "Navy", image: "cj21.jpg", category_id: 5)
+
+#Women Shoes
+shoe1 = Piece.create(name: "Funky Boot", color: "Black", image: "shoe1.jpg", category_id: 6)
+shoe2 = Piece.create(name: "Chunky Sneaker", color: "Tan", image: "shoe2.jpg", category_id: 6)
+shoe3 = Piece.create(name: "Strappy Sandle", color: "Black", image: "shoe3.jpg", category_id: 6)
+shoe4 = Piece.create(name: "Pointy Boots", color: "Black", image: "shoe4.jpg", category_id: 6)
+shoe5 = Piece.create(name: "Mules", color: "Cheetah", image: "shoe5.jpg", category_id: 6)
+shoe6 = Piece.create(name: "Closed Toe Pointy Heel", color: "Black", image: "shoe6.jpg", category_id: 6)
+shoe7 = Piece.create(name: "Boot", color: "Black", image: "shoe7.jpg", category_id: 6)
+shoe8 = Piece.create(name: "Trainers", color: "Blue", image: "shoe8.jpg", category_id: 6)
+shoe9 = Piece.create(name: "Open Toe Heels", color: "Black", image: "shoe9.jpg", category_id: 6)
+shoe10 = Piece.create(name: "Open Toe Heels", color: "Tan", image: "shoe10.jpg", category_id: 6)
+
+#Men Shoe
+shoe11 = Piece.create(name: "Oxfords", color: "Brown", image: "shoe11.jpg", category_id: 6)
+shoe12 = Piece.create(name: "Trainers", color: "White", image: "shoe12.jpg", category_id: 6)
+shoe13 = Piece.create(name: "Wing Tipped", color: "Brown", image: "shoe13.jpg", category_id: 6)
+shoe14 = Piece.create(name: "Penny Loafers", color: "Black", image: "shoe14.jpg", category_id: 6)
+shoe15 = Piece.create(name: "Tassel Penny Loafers", color: "Black", image: "shoe15.jpg", category_id: 6)
+shoe16 = Piece.create(name: "Chukka Boots", color: "Brown", image: "shoe16.jpg", category_id: 6)
+shoe17 = Piece.create(name: "Trainers", color: "Grey", image: "shoe17.jpg", category_id: 6)
+
+#Women Accessories
+acc1 = Piece.create(name: "Sunglasses", color: "Green", image: "acc1.jpg", category_id: 7)
+acc2 = Piece.create(name: "Tiny Sunglasses", color: "Blue", image: "acc2.jpg", category_id: 7)
+acc3 = Piece.create(name: "Crossbody Bag", color: "Black", image: "acc3.jpg", category_id: 7)
+acc4 = Piece.create(name: "Beret", color: "Tan", image: "acc4.jpg", category_id: 7)
+acc5 = Piece.create(name: "Belt Bag", color: "Brown", image: "acc5.jpg", category_id: 7)
+acc6 = Piece.create(name: "Hoop Earrings", color: "Gold", image: "acc6.jpg", category_id: 7)
+acc7 = Piece.create(name: "Tassel Earrings", color: "Black", image: "acc7.jpg", category_id: 7)
+acc8 = Piece.create(name: "Flat Hoop Earrings", color: "Gold", image: "acc8.jpg", category_id: 7)
+acc9 = Piece.create(name: "Geometric Earrings", color: "Gold", image: "acc9.jpg", category_id: 7)
+acc10 = Piece.create(name: "Stone Ring", color: "Blue", image: "acc10.jpg", category_id: 7)
+
+#Men Accessories
+acc11 = Piece.create(name: "Cap", color: "Black", image: "acc11.jpg", category_id: 7)
+acc12 = Piece.create(name: "Jaguar Cuff Links", color: "Gold", image: "acc12.jpg", category_id: 7)
+acc13 = Piece.create(name: "Sunglasses", color: "Black", image: "acc13.jpg", category_id: 7)
+acc14 = Piece.create(name: "Silk Tie", color: "Grey", image: "acc14.jpg", category_id: 7)
+acc15 = Piece.create(name: "Bow Tie", color: "Navy", image: "acc15.jpg", category_id: 7)
 
 
-occasion1 = Occasion.create(name: "formal")
-occasion2 = Occasion.create(name: "super casual")
+# outfit1 = Outfit.create(name: "Gym", rating: 5, occasion_id: 1)
+# outfit2 = Outfit.create(name: "Sunday Outfit", rating: 2, occasion_id: 2)
+# outfit3 = Outfit.create(name: "Friday Work Day", rating: 4, occasion_id: 3)
+# outfit4 = Outfit.create(name: "Tacky Christmas", rating: 5, occasion_id: 5)
+# outfit5 = Outfit.create(name: "Best Friend's Wedding", rating: 5, occasion_id: 7) 
 
-outfit1 = Outfit.create(name: "my most favoritest fit shawty", rating: 5, user_id: 1, occasion_id: 1)
-outfit2 = Outfit.create(name: "its so so", rating: 3, user_id: 2, occasion_id: 2)
+# outfit6 = Outfit.create(name: "Interview", rating: 4, occasion_id: 4)
+# outfit7 = Outfit.create(name: "Halloween", rating: 3, occasion_id: 5)
+# outfit8 = Outfit.create(name: "Date Night", rating: 2, occasion_id: 6)
+# outfit9 = Outfit.create(name: "Gala Benefit", rating: 5, occasion_id: 7)
+# outfit10 = Outfit.create(name: "Athleisure", rating: 4, occasion_id: 2)
