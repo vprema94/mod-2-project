@@ -5,7 +5,8 @@
     <%= f.number_field :rating %><br /><br />
 <%= f.fields_for :clothing_outfits do |co| %>
   <p>Your Tops:</p>
-    <%= co.collection_check_boxes :piece_id, @pieces, :id, :name %>
+    <%= co.collection_check_boxes :piece_id, @pieces, :id, :name do |b|
+        b.label {b.check_box + image_tag(b.object.image, height: 150)} end %><br><br /><br />
   <%= co.submit class: "btn btn-primary"%>
   <br /><br />
   <% end %>
