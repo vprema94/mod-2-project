@@ -3,11 +3,13 @@
     <%= f.text_field :name %><br /><br />
     <p>Rating:</p>
     <%= f.number_field :rating %><br /><br />
+    <p>Occasion:</p>
+    <%= f.collection_select :occasion_id, @occasions, :id, :name %><br /><br />
 <%= f.fields_for :clothing_outfits do |co| %>
-  <p>Your Tops:</p>
+  <p>Your Clothes:</p>
     <%= co.collection_check_boxes :piece_id, @pieces, :id, :name do |b|
-        b.label {b.check_box + image_tag(b.object.image, height: 150)} end %><br><br /><br />
-  <%= co.submit class: "btn btn-primary"%>
+        b.label {b.check_box + image_tag(b.object.image, height: 200)} end %><br><br /><br />
+  <%= co.submit "SUBMIT", class: "btn btn-primary"%>
   <br /><br />
   <% end %>
 <% end %>

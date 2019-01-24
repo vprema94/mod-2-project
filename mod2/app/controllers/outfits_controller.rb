@@ -3,24 +3,24 @@ class OutfitsController < ApplicationController
   before_action :authorize!, only: [:new, :edit, :create, :update]
 
   def show
-    @outfits = current_user.outfits
+    @outfit = Outfit.find(params[:id])
   end
 
   def index
-    @outfits = Outfit.all
+    @outfits = current_user.outfits
   end
 
   def new
     @outfit = Outfit.new
     @pieces = current_user.pieces
+    @occasions = Occasion.all
   end
 
   def create
     @outfit = Outfit.new(outfit_params)
     @outfit.user_id = session[:user_id]
-    @outfit.occasion = Occasion.first
     @clothing = params["outfit"]["clothing_outfits"]["piece_id"].reject!(&:blank?)
-  
+    byebug
     if @outfit.valid?
       @outfit.save
       @clothing.each do |id|
@@ -55,7 +55,7 @@ class OutfitsController < ApplicationController
   private
 
   def outfit_params
-    params.require(:outfit).permit(:name, :rating, :user_id, :occassion_id, :piece_id => [])
+    params.require(:outfit).permit(:name, :rating, :user_id, :occasion_id, :piece_id => [])
   end
 
 end
