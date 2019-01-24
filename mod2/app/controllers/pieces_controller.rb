@@ -16,6 +16,7 @@ class PiecesController < ApplicationController
   def create
     @piece = Piece.new(piece_params)
     @categories = Category.all
+    @piece.user_id = session[:user_id]
     if @piece.valid?
       @piece.save
       redirect_to piece_path(@piece)
@@ -47,7 +48,7 @@ class PiecesController < ApplicationController
   private
 
   def piece_params
-    params.require(:piece).permit(:name, :clean_lvl, :color, :image, :category_id)
+    params.require(:piece).permit(:name, :clean_lvl, :color, :image, :category_id, :user_id)
   end
 
 end
