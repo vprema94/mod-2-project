@@ -3,7 +3,7 @@ class OutfitsController < ApplicationController
   before_action :authorize!, only: [:new, :edit, :create, :update]
 
   def show
-    @outfit = Outfit.find(params[:id])
+    @outfits = current_user.outfits
   end
 
   def index

@@ -1,7 +1,7 @@
-<h2> Here are all the outfits </h2>
+<h2> Here are all your outfits </h2>
 
 <ol>
-  <% @outfits.each do |outfit| %>
+  <% @outfits.pieces do |outfit| %>
   <li> <%= link_to(outfit.name, outfit_path(outfit)) %> </li>
   <%end%>
 </ol>
