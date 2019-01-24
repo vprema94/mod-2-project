@@ -12,7 +12,7 @@ class OccasionsController < ApplicationController
   end
 
   def create
-    @occasion = Occasion.new(params)
+    @occasion = Occasion.new(occasion_params)
     if @occasion.valid?
       @occasion.save
       redirect_to occasions_path
@@ -20,19 +20,25 @@ class OccasionsController < ApplicationController
       render :new
   end
 
-  def edit
-    @occasion = Occasion.find(params[:id])
-  end
+  # def edit
+  #   @occasion = Occasion.find(params[:id])
+  # end
+  #
+  # def update
+  #   @occasion = Occasion.find(params[:id])
+  #   @occasion.update
+  #   redirect_to occasion_path(@occasion)
+  # end
 
-  def update
-    @occasion = Occasion.find(params[:id])
-    @occasion.update
-    redirect_to occasion_path(@occasion)
-  end
+  # def destroy
+  #   @occasion = Occasion.find(params[:id])
+  #   @occasion.destroy
+  #   redirect_to occasions_path
+  # end
 
-  def destroy
-    @occasion = Occasion.find(params[:id])
-    @occasion.destroy
-    redirect_to occasions_path
+  private
+
+  def occasion_params
+    params.require(:occasion).permit(:name)
   end
 end

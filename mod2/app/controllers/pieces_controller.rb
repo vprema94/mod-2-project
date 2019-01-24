@@ -1,5 +1,7 @@
 class PiecesController < ApplicationController
 
+  before_action :authorize!, only: [:new, :edit, :create, :update]
+
   def show
     @piece = Piece.find(params[:id])
   end
