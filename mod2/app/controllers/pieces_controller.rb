@@ -7,7 +7,14 @@ class PiecesController < ApplicationController
   end
 
   def index
-    @pieces = Piece.all
+    @pieces = current_user.pieces
+    @tops = @pieces.where("category_id = 1")
+    @bottoms = @pieces.where("category_id = 2")
+    @dr = @pieces.where("category_id = 3")
+    @suits = @pieces.where("category_id = 4")
+    @cj = @pieces.where("category_id = 5")
+    @shoes = @pieces.where("category_id = 6")
+    @acc = @pieces.where("category_id = 7")
   end
 
   def new
