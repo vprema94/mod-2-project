@@ -37,10 +37,12 @@ class PiecesController < ApplicationController
 
   def edit
     @piece = Piece.find(params[:id])
+    @categories = Category.all
   end
 
   def update
     @piece = Piece.find(params[:id])
+    @categories = Category.all
     if @piece.update(piece_params)
       redirect_to piece_path(@piece)
     else
