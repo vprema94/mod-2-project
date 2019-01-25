@@ -1,7 +1,21 @@
-<h2> Here are all your outfits </h2>
+<!DOCTYPE html>
+<html>
+    <head>
+        <div class="container">
+            <h2> Your Outfits </h2>
+        </div>
+    </head>
 
-<ol>
-  <% @outfits.pieces do |outfit| %>
-  <li> <%= link_to(outfit.name, outfit_path(outfit)) %> </li>
-  <%end%>
-</ol>
+    <body>
+        <div class="container">
+          <% @outfits.each do |outfit| %>
+          <h4> <%= link_to(outfit.name, outfit_path(outfit)) %> (<%=outfit.occasion.name%>) </h4>
+            <div class="container">
+              <% outfit.pieces.each do |piece| %>
+                <%= image_tag(piece.image, height: 200) %>
+              <% end %> 
+            </div>
+          <% end %>
+        </div> 
+    </body>
+</html>
