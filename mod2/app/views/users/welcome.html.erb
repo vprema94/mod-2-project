@@ -1,20 +1,21 @@
-<h1>Welcome to your awesome closet!</h1>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Welcome to your awesome closet!</h1>
+    <p class="lead">
+      <% if session[:user_id] %>
+      <h4>Love your self</h4>
+      <% else %>
+      <h4>Sign in to pick or create an outfit!</h4>
+      <% end %>
+    </p>
 
-<% if session[:user_id] %>
-<p> <%= link_to("Profile", user_path(current_user)) %> </p>
-<% else %>
-<% nil %>
-<% end %>
+    <% if session[:user_id] %>
+    <h4> Welcome back, <%= current_user.username %> </h4>
+    <%= link_to "Logout", logout_path, :method => 'delete' %>
+    <% else %>
+    <%= link_to("Login", login_path, :class => "btn btn-primary") %>
+    <% end %>
+  </div>
+</div>
 
-
-<% if session[:user_id] %>
-<h4>Love your self</h4>
-<% else %>
-<h4>Sign in to pick or create an outfit!</h4>
-<% end %>
-
-<% if session[:user_id] %>
-<p> <%= nil %> </p>
-<% else %>
-<%= link_to("Sign up", new_user_path) %>
-<% end %>
+    <img src="assets/closet.jpg" class="img-fluid" alt="Responsive image">

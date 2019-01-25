@@ -8,10 +8,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    if params[:id] != current_user.id
-    end
-      
-    @user = User.find_by(params[:id])
+    @user = User.find(current_user.id)
+
+    # if params[:id] != current_user.id
+    #
+    # end
   end
 
   def create

@@ -10,13 +10,9 @@
   </head>
 
   <body>
-    <% if session[:user_id] %>
-    <h4> Welcome back, <%= current_user.username %> </h4>
-    <%= link_to "Logout", logout_path, :method => 'delete' %>
-    <% else %>
-    <%= link_to("Login", login_path) %>
-    <% end %>
-
-    <%= yield %>
+    <div class="container">
+        <%= render 'layouts/header' %>
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,0 +1,38 @@
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+
+      <% if session[:user_id] %>
+      <a class="nav-item nav-link" href="#"><%= link_to("Home", root_path)%></a>
+      <p> <%= nil %> </p>
+      <% else %>
+      <%= link_to("Sign up", new_user_path) %>
+      <% end %>
+
+      <% if session[:user_id] %>
+      <a class="nav-item nav-link" href="#"><%= link_to("Profile", user_path(current_user))%></a>
+      <% else %>
+      <% nil %>
+      <% end %>
+
+      <% if session[:user_id] %>
+      <a class="nav-item nav-link" href="#"><%= link_to("Add clothes", new_piece_path)%></a>
+      <% else %>
+      <% nil %>
+      <% end %>
+
+      <% if session[:user_id] %>
+      <a class="nav-item nav-link" href="#"><%= link_to("Create Outfit", new_outfit_path)%></a>
+      <% else %>
+      <% nil %>
+      <% end %>
+
+      <% if session[:user_id] %>
+      <a class="nav-item nav-link" href="#"><%= link_to("Edit profile", edit_user_path(current_user))%></a>
+      <% else %>
+      <% nil %>
+      <% end %>
+
+    </div>
+  </div>
+</nav>
