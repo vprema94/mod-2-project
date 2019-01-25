@@ -3,13 +3,6 @@
     <div class="navbar-nav">
 
       <% if session[:user_id] %>
-      <a class="nav-item nav-link" href="#"><%= link_to("Home", root_path)%></a>
-      <p> <%= nil %> </p>
-      <% else %>
-      <%= link_to("Sign up", new_user_path) %>
-      <% end %>
-
-      <% if session[:user_id] %>
       <a class="nav-item nav-link" href="#"><%= link_to("Profile", user_path(current_user))%></a>
       <% else %>
       <% nil %>
@@ -32,6 +25,26 @@
       <% else %>
       <% nil %>
       <% end %>
+
+      <% if session[:user_id] %>
+      <a class="nav-item nav-link" href="#"><%= link_to("Your outfits", outfits_path(current_user))%></a>
+      <% else %>
+      <% nil %>
+      <% end %>
+
+      <% if session[:user_id] %>
+      <a class="nav-item nav-link" href="#"><%= link_to("Your closet", pieces_path)%></a>
+      <% else %>
+      <% nil %>
+      <% end %>
+
+      <% if session[:user_id] %>
+      <a class="nav-item nav-link" href="#"><%= link_to("Home", root_path)%></a>
+      <% else %>
+      <% nil %>
+      <% end %>
+
+
 
     </div>
   </div>

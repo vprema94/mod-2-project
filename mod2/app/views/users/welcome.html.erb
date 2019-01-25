@@ -1,13 +1,21 @@
+<% a = "welcome to go closet" %>
+<% `say "#{a}"` %>
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Welcome to your awesome closet!</h1>
     <p class="lead">
       <% if session[:user_id] %>
-      <h4>Love your self</h4>
+      <h4>Love yourself</h4>
       <% else %>
       <h4>Sign in to pick or create an outfit!</h4>
       <% end %>
     </p>
+
+    <% if session[:user_id] %>
+    <% nil %>
+    <% else %>
+    <%= link_to("Sign up", new_user_path) %>
+    <% end %>
 
     <% if session[:user_id] %>
     <h4> Welcome back, <%= current_user.username %> </h4>
