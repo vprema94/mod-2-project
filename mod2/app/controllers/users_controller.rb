@@ -1,10 +1,5 @@
 class UsersController < ApplicationController
 
-  # def index
-  #   @users = User.all
-  #   # @user = User.find_by(params[:id])
-  # end
-
   def welcome
   end
 
@@ -13,7 +8,10 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(current_user.id)
+    if params[:id] != current_user.id
+    end
+      
+    @user = User.find_by(params[:id])
   end
 
   def create

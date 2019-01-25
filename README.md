@@ -2,21 +2,25 @@
 Closet Application for Module 2
 
 -	Users have:
-  o	clothing page (for each type)
   o	overall clothing – clothing “index”
-  o	outfit page sorted by occasion
+
 
 -	Users can:
   o	add new clothing 
-  o	delete clothing
   o	create new outfits
-  o	delete outfits
+
   o	edit outfits
-  o	wear outfits (up clean_lvl count)*** 
-    ♣	*** not sure best way to execute… 
     
+ 
+
 -	User Login
 
-- Random outfit generator
-
 -	Cool ass CSS
+
+ o	outfit page sorted by occasion
+  o	delete clothing
+  o	delete outfits
+
+  
+  o	wear outfits (up clean_lvl count)*** 
+    ♣	*** not sure best way to execute… 

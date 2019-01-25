@@ -1,5 +1,27 @@
-<h2> <%= @outfit %> </h2>
+<!DOCTYPE html>
+<html>
+    <head>
+        <div class="container">
+            <h2> <%= @outfit.name %> </h2>
+        </div>
+    </head>
 
-<h5> How much you like this outfit <%= @outfit.rating %> out of 5!</h5>
+    <body>
+        <div class="container">
+            <h4> Your Rating: <%= @outfit.rating %>/5</h4>
+        </div> 
 
-<h5> <%= @outfit.occasion.name.capitalize %> is the occasion for this. </h5>
+        <div class="container">
+            <h4> Occassion: <%= @outfit.occasion.name %></h4>
+        </div> 
+        <div class="container">
+            <h4> Items: </h4>
+                <% @pieces.each do |piece| %>
+                <%= image_tag(piece.image, height: 200) %>
+                <% end %>
+        </div> 
+        <div class="container"> 
+            <%= link_to 'Edit', edit_outfit_path(@outfit), :class => "btn btn-primary" %>
+        </div>
+    </body>
+</html>

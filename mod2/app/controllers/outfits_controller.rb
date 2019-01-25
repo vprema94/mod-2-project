@@ -3,24 +3,32 @@ class OutfitsController < ApplicationController
   before_action :authorize!, only: [:new, :edit, :create, :update]
 
   def show
-    @outfits = current_user.outfits
+    @outfit = Outfit.find(params[:id])
+    @pieces = @outfit.pieces
   end
 
   def index
-    @outfits = Outfit.all
+    @outfits = current_user.outfits
   end
 
   def new
     @outfit = Outfit.new
     @pieces = current_user.pieces
+    @tops = @pieces.where("category_id = 1")
+    @bottoms = @pieces.where("category_id = 2")
+    @dr = @pieces.where("category_id = 3")
+    @suits = @pieces.where("category_id = 4")
+    @cj = @pieces.where("category_id = 5")
+    @shoes = @pieces.where("category_id = 6")
+    @acc = @pieces.where("category_id = 7")
+    @occasions = Occasion.all
   end
 
   def create
     @outfit = Outfit.new(outfit_params)
     @outfit.user_id = session[:user_id]
-    @outfit.occasion = Occasion.first
     @clothing = params["outfit"]["clothing_outfits"]["piece_id"].reject!(&:blank?)
-  
+    
     if @outfit.valid?
       @outfit.save
       @clothing.each do |id|
@@ -35,6 +43,15 @@ class OutfitsController < ApplicationController
 
   def edit
     @outfit = Outfit.find(params[:id])
+    @pieces = current_user.pieces
+    @tops = @pieces.where("category_id = 1")
+    @bottoms = @pieces.where("category_id = 2")
+    @dr = @pieces.where("category_id = 3")
+    @suits = @pieces.where("category_id = 4")
+    @cj = @pieces.where("category_id = 5")
+    @shoes = @pieces.where("category_id = 6")
+    @acc = @pieces.where("category_id = 7")
+    @occasions = Occasion.all
   end
 
   def update
@@ -55,7 +72,7 @@ class OutfitsController < ApplicationController
   private
 
   def outfit_params
-    params.require(:outfit).permit(:name, :rating, :user_id, :occassion_id, :piece_id => [])
+    params.require(:outfit).permit(:name, :rating, :user_id, :occasion_id, :piece_id => [])
   end
 
 end

@@ -1,4 +1,28 @@
-<h1>Welcome to your awesome closet!</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <div class="container">
+            <h2> Welcome to Your Closet! </h2>
+        </div>
+    </head>
+
+    <body>
+        <div class="container">
+          <% @tops.each do |top| %>
+            <%= image_tag(top.image, height: 200) %>
+            <h4> <%= link_to(top.name, piece_path(top)) %> (<%= top.color %>) </h4>
+          <% end %>
+        </div> 
+
+
+
+
+
+    </body>
+</html>
+
+
+
 
 <ul>
   <% @tops.each do |top| %>
