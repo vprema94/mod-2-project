@@ -1,37 +1,21 @@
-
-<%= image_tag @user.image %>
-
-<p>Would you like to add clothes to your closet <%= link_to(@user.first_name, new_piece_path) %> ?</p>
-<p>Want to make an <%= link_to("outfit", new_outfit_path) %> ?</p>
-<p>Edit user profile, <%= link_to(@user.email, edit_user_path(@user))%></p>
-
-<p><%= link_to("Home", root_path) %></p>
-
-
 <!DOCTYPE html>
 <html>
     <head>
         <div class="container">
-            <h2> <%= @user.first_name.capitalize + " " + @user.last_name.capitalize %> </h2>
+            <h2> Hello, <%= @user.first_name.capitalize + " " + @user.last_name.capitalize %>! </h2>
         </div>
     </head>
 
     <body>
         <div class="container">
-            <%= @outfit.rating %>
-        </div> 
-
-        <div class="container">
-            <h4> Occassion: <%= @outfit.occasion.name %></h4>
-        </div> 
-        <div class="container">
-            <h4> Items: </h4>
-                <% @pieces.each do |piece| %>
-                <%= image_tag(piece.image, height: 200) %>
-                <% end %>
-        </div> 
-        <div class="container"> 
-            <%= link_to 'Edit', edit_outfit_path(@outfit), :class => "btn btn-primary" %>
+            <br>
+            <%= image_tag(@user.image, height: 300) %>
+            <br><br>
+            <h4> Username: <%= @user.username %> </h4>
+            <br>
+            <h4> Email: <%= @user.email %> </h4>
+            <br>
+            <%= link_to 'Edit Account', edit_user_path(current_user), :class => "btn btn-primary" %>
         </div>
     </body>
 </html>

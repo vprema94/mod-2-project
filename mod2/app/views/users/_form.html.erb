@@ -1,15 +1,22 @@
-<%= form_for(@user) do |f| %>
-<%= f.label "Username:" %>
-<%= f.text_field :username %>
-<%= f.label "Password:" %>
-<%= f.text_field :password %>
-<%= f.label "Email:" %>
-<%= f.text_field :email %>
-<%= f.label "Image:" %>
-<%= f.text_field :image %>
-<%= f.label "First name:" %>
-<%= f.text_field :first_name %>
-<%= f.label "Last name:" %>
-<%= f.text_field :last_name %>
-<%= f.submit %>
-<% end %>
+<!DOCTYPE html>
+<html>
+    <body>
+        <div class="container">
+            <%= form_for(@user) do |f| %>
+            <h4>Username:</h4>
+            <%= f.text_field :username %><br /><br />
+            <h4>Password:</h4>
+            <%= f.text_field :password %><br /><br />
+            <h4>Email:</h4>
+            <%= f.text_field :email %><br /><br />
+            <h4>Image URL:</h4>
+            <%= f.text_field :image %><br /><br />
+            <h4>First Name:</h4>
+            <%= f.text_field :first_name %><br /><br />
+            <h4>Last Name:</h4>
+            <%= f.text_field :last_name %><br /><br />            
+            <%= f.submit "SUBMIT", class: "btn btn-primary" %>
+            <% end %>
+        </div>
+    </body>
+</html>

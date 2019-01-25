@@ -8,10 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    if params[:id] != current_user.id
-    end
-      
-    @user = User.find_by(params[:id])
+    @user = User.find(current_user.id)
   end
 
   def create
@@ -36,12 +33,6 @@ class UsersController < ApplicationController
       redirect_to edit_user_path(@user)
     end
   end
-
-  # def destroy
-  #   @user = User.find(params[:id])
-  #   @user.destroy
-  #   redirect_to users_path
-  # end
 
   private
 

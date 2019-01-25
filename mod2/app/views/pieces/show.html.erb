@@ -9,17 +9,11 @@
     <body>
         <div class="container">
             <h4> Color: <%= @piece.color %></h4>
-        </div> 
-        <div class="container">
             <h4> Type: <%= @piece.category.name %></h4>
-        </div> 
-        <div class="container">
             <h4> Clean? <%= @piece.clean_lvl %>/5</h4>
-        </div> 
-        <div class="container">
+            <br>
             <%= image_tag(@piece.image, height: 450) %> 
-        </div> 
-        <div class="container"> 
+            <br><br>
             <%= link_to 'Edit', edit_piece_path(@piece), :class => "btn btn-primary" %>
         </div>
     </body>

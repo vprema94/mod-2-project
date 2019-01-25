@@ -15,6 +15,7 @@ class PiecesController < ApplicationController
     @cj = @pieces.where("category_id = 5")
     @shoes = @pieces.where("category_id = 6")
     @acc = @pieces.where("category_id = 7")
+    @colors = @pieces.colors
   end
 
   def new
