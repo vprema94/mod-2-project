@@ -1,7 +1,20 @@
-<h1> <%= @piece.name %> </h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <div class="container">
+            <h2> <%= @piece.name %> </h2>
+        </div>
+    </head>
 
-<li><%= @piece.color %></li>
-
-<li><%= @piece.clean_lvl %></li>
-
-<ul><%= image_tag @piece.image %></ul>
+    <body>
+        <div class="container">
+            <h4> Color: <%= @piece.color %></h4>
+            <h4> Type: <%= @piece.category.name %></h4>
+            <h4> Clean? <%= @piece.clean_lvl %>/5</h4>
+            <br>
+            <%= image_tag(@piece.image, height: 450) %> 
+            <br><br>
+            <%= link_to 'Edit', edit_piece_path(@piece), :class => "btn btn-primary" %>
+        </div>
+    </body>
+</html>

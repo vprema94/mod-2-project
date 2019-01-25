@@ -15,6 +15,7 @@ class PiecesController < ApplicationController
     @cj = @pieces.where("category_id = 5")
     @shoes = @pieces.where("category_id = 6")
     @acc = @pieces.where("category_id = 7")
+    @colors = @pieces.colors
   end
 
   def new
@@ -32,15 +33,16 @@ class PiecesController < ApplicationController
     else
       render :new
     end
-
   end
 
   def edit
     @piece = Piece.find(params[:id])
+    @categories = Category.all
   end
 
   def update
     @piece = Piece.find(params[:id])
+    @categories = Category.all
     if @piece.update(piece_params)
       redirect_to piece_path(@piece)
     else

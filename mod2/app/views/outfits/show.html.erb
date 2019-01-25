@@ -9,18 +9,12 @@
     <body>
         <div class="container">
             <h4> Your Rating: <%= @outfit.rating %>/5</h4>
-        </div> 
-
-        <div class="container">
             <h4> Occassion: <%= @outfit.occasion.name %></h4>
-        </div> 
-        <div class="container">
             <h4> Items: </h4>
                 <% @pieces.each do |piece| %>
                 <%= image_tag(piece.image, height: 200) %>
                 <% end %>
-        </div> 
-        <div class="container"> 
+            <br><br>    
             <%= link_to 'Edit', edit_outfit_path(@outfit), :class => "btn btn-primary" %>
         </div>
     </body>

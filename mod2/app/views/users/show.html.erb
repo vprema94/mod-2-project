@@ -1,3 +1,21 @@
-<h1><%= @user.first_name.capitalize + " " + @user.last_name.capitalize %></h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <div class="container">
+            <h2> Hello, <%= @user.first_name.capitalize + " " + @user.last_name.capitalize %>! </h2>
+        </div>
+    </head>
 
-<%= image_tag @user.image %>
+    <body>
+        <div class="container">
+            <br>
+            <%= image_tag(@user.image, height: 300) %>
+            <br><br>
+            <h4> Username: <%= @user.username %> </h4>
+            <br>
+            <h4> Email: <%= @user.email %> </h4>
+            <br>
+            <%= link_to 'Edit Account', edit_user_path(current_user), :class => "btn btn-primary" %>
+        </div>
+    </body>
+</html>

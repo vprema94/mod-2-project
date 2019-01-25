@@ -45,17 +45,30 @@ class OutfitsController < ApplicationController
     @outfit = Outfit.find(params[:id])
     @pieces = current_user.pieces
     @tops = @pieces.where("category_id = 1")
+    @t = @outfit.pieces.where("category_id = 1")
     @bottoms = @pieces.where("category_id = 2")
+    @b = @outfit.pieces.where("category_id = 2")
     @dr = @pieces.where("category_id = 3")
+    @d = @outfit.pieces.where("category_id = 3")
     @suits = @pieces.where("category_id = 4")
+    @s = @outfit.pieces.where("category_id = 4")
     @cj = @pieces.where("category_id = 5")
+    @c = @outfit.pieces.where("category_id = 5")
     @shoes = @pieces.where("category_id = 6")
+    @sh = @outfit.pieces.where("category_id = 6")
     @acc = @pieces.where("category_id = 7")
+    @a = @outfit.pieces.where("category_id = 7")
     @occasions = Occasion.all
   end
 
   def update
     @outfit = Outfit.find(params[:id])
+    @clothing = params["outfit"]["clothing_outfits"]["piece_id"].reject!(&:blank?)
+    @outfit.pieces = []
+    @clothing.each do |id|
+      piece = Piece.find(id)
+      @outfit.pieces << piece
+    end 
     if @outfit.update(outfit_params)
       redirect_to outfit_path(@outfit)
     else
