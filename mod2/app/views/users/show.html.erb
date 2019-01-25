@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <div class="container">
-            <h2> Hello, <%= @user.first_name.capitalize + " " + @user.last_name.capitalize %>! </h2>
-        </div>
+      <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">We love your wardrobe!</h1>
+        <p class="lead">
+          <%= @user.first_name.capitalize + " " + @user.last_name.capitalize %>
+        </p>
+      </div>
+    </div>
+
     </head>
 
     <body>
