@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_24_154050) do
+ActiveRecord::Schema.define(version: 2019_01_24_224506) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 2019_01_24_154050) do
   create_table "outfits", force: :cascade do |t|
     t.string "name"
     t.integer "rating"
-    t.integer "user_id"
     t.integer "occasion_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -46,9 +45,9 @@ ActiveRecord::Schema.define(version: 2019_01_24_154050) do
     t.string "color"
     t.string "image"
     t.integer "category_id"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -57,9 +56,9 @@ ActiveRecord::Schema.define(version: 2019_01_24_154050) do
     t.string "image"
     t.string "first_name"
     t.string "last_name"
-    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
 end
