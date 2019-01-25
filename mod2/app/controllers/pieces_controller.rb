@@ -32,7 +32,6 @@ class PiecesController < ApplicationController
     else
       render :new
     end
-
   end
 
   def edit

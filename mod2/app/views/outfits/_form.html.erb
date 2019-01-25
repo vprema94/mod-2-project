@@ -5,52 +5,32 @@
             <%= form_for(@outfit) do |f| %>
             <h4>Outfit Name:</h4>
             <%= f.text_field :name %><br /><br />
-        </div>
-        <div class="container">
             <h4>Rating:</h4>
             <%= f.number_field :rating %><br /><br />
-        </div>
-        <div class="container">
             <h4>Occasion:</h4>
             <%= f.collection_select :occasion_id, @occasions, :id, :name %><br /><br />
-        </div>
-        <div class="container">
             <%= f.fields_for :clothing_outfits do |co| %>
             <h4>Your Tops:</h4>
-                <%= co.collection_check_boxes :piece_id, @tops, :id, :name do |b|
+                <%= co.collection_check_boxes :piece_id, @tops, :id, :name, { checked: @t.ids.map(&:to_param) } do |b|
                     b.label {b.check_box + image_tag(b.object.image, height: 200)} end %><br><br /><br />
-        </div>
-        <div class="container">
             <h4>Your Bottoms:</h4>
-                <%= co.collection_check_boxes :piece_id, @bottoms, :id, :name do |b|
+                <%= co.collection_check_boxes :piece_id, @bottoms, :id, :name, { checked: @b.ids.map(&:to_param) } do |b|
                     b.label {b.check_box + image_tag(b.object.image, height: 200)} end %><br><br /><br />
-        </div>
-        <div class="container">
             <h4>Your Dresses & Rompers:</h4>
-                <%= co.collection_check_boxes :piece_id, @dr, :id, :name do |b|
+                <%= co.collection_check_boxes :piece_id, @dr, :id, :name, { checked: @d.ids.map(&:to_param) } do |b|
                     b.label {b.check_box + image_tag(b.object.image, height: 200)} end %><br><br /><br /> 
-        </div>
-        <div class="container">   
             <h4>Your Suits:</h4>
-                <%= co.collection_check_boxes :piece_id, @suits, :id, :name do |b|
+                <%= co.collection_check_boxes :piece_id, @suits, :id, :name, { checked: @s.ids.map(&:to_param) } do |b|
                     b.label {b.check_box + image_tag(b.object.image, height: 200)} end %><br><br /><br /> 
-        </div>
-        <div class="container">
             <h4>Your Coats & Jackets:</h4>
-                <%= co.collection_check_boxes :piece_id, @cj, :id, :name do |b|
+                <%= co.collection_check_boxes :piece_id, @cj, :id, :name, { checked: @c.ids.map(&:to_param) } do |b|
                     b.label {b.check_box + image_tag(b.object.image, height: 200)} end %><br><br /><br />  
-        </div>
-        <div class="container">
             <h4>Your Shoes:</h4>
-                <%= co.collection_check_boxes :piece_id, @shoes, :id, :name do |b|
+                <%= co.collection_check_boxes :piece_id, @shoes, :id, :name, { checked: @sh.ids.map(&:to_param) } do |b|
                     b.label {b.check_box + image_tag(b.object.image, height: 200)} end %><br><br /><br />
-        </div>
-        <div class="container">     
             <h4>Your Accessories:</h4>
-                <%= co.collection_check_boxes :piece_id, @acc, :id, :name do |b|
-                    b.label {b.check_box + image_tag(b.object.image, height: 200)} end %><br><br /><br />  
-        </div>
-        <div class="container">                          
+                <%= co.collection_check_boxes :piece_id, @acc, :id, :name, { checked: @a.ids.map(&:to_param) } do |b|
+                    b.label {b.check_box + image_tag(b.object.image, height: 200)} end %><br><br /><br />         
             <%= co.submit "SUBMIT", class: "btn btn-primary"%>
             <br /><br />
             <% end %>
