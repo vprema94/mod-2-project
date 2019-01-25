@@ -7,48 +7,68 @@
     </head>
 
     <body>
-        <div class="container">
-          <h3>Your Tops:</h3>
+        <div class="container piece-container">
+         <h3>Your Tops:</h3>
+          <div class="item">
             <% @tops.each do |item| %>
-              <%= image_tag(item.image, height: 200) %>
+              <%= image_tag(item.image, height: 200) %> <br>
               <h4> <%= link_to(item.name, piece_path(item)) %> (<%= item.color %>) </h4>
             <% end %>
             <br>
-          <h3>Your Bottoms:</h3>
+            </div> 
+            <br>
+        <h3>Your Bottoms:</h3>
+          <div class="item">
             <% @bottoms.each do |item| %>
               <%= image_tag(item.image, height: 200) %>
               <h4> <%= link_to(item.name, piece_path(item)) %> (<%= item.color %>) </h4>
             <% end %>
-            <br>            
+            <br> 
+            </div>        
+                        <br>  
           <h3>Your Dresses & Rompers:</h3>
+            <div class="item"> 
             <% @dr.each do |item| %>
               <%= image_tag(item.image, height: 200) %>
               <h4> <%= link_to(item.name, piece_path(item)) %> (<%= item.color %>) </h4>
             <% end %>
-            <br>            
+            <br>      
+            </div>      
+                        <br>
           <h3>Your Suits:</h3>
+            <div class="item">
             <% @suits.each do |item| %>
               <%= image_tag(item.image, height: 200) %>
               <h4> <%= link_to(item.name, piece_path(item)) %> (<%= item.color %>) </h4>
             <% end %>
             <br>
+            </div>
+                        <br>
           <h3>Your Coats & Jackets:</h3>
+            <div class="item">
             <% @dr.each do |item| %>
               <%= image_tag(item.image, height: 200) %>
               <h4> <%= link_to(item.name, piece_path(item)) %> (<%= item.color %>) </h4>
             <% end %>
             <br>
-          <h3>Your Shoes:</h3>
+            </div>
+                        <br>
+        <h3>Your Shoes:</h3>
+            <div class="item">
             <% @shoes.each do |item| %>
               <%= image_tag(item.image, height: 200) %>
               <h4> <%= link_to(item.name, piece_path(item)) %> (<%= item.color %>) </h4>
             <% end %>
             <br>
-          <h3>Your Accessories:</h3>
+            </div>
+                        <br>
+        <h3>Your Accessories:</h3>
+            <div class="item">
             <% @acc.each do |item| %>
               <%= image_tag(item.image, height: 200) %>
               <h4> <%= link_to(item.name, piece_path(item)) %> (<%= item.color %>) </h4>
             <% end %>
+            </div>
         </div> 
     </body>
 </html>

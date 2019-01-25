@@ -1,6 +1,7 @@
-vanessa = User.create(username: "vprema", password: "maximus1", email: "vprema94@gmail.com", image: "https://cdn.shopify.com/s/files/1/1061/1924/products/Smiling_Emoji_with_Smiling_Eyes_large.png?v=1480481060", first_name:"Vanessa", last_name: "Prema")
+Occasion.destroy_all
+vanessa = User.create(username: "vprema", password: "maximus1", email: "vprema94@gmail.com", image: "vanessa.jpg", first_name:"Vanessa", last_name: "Prema")
 
-blair = User.create(username: "bcarroll", password: "cookies", email: "bc123@gmail.com", image: "https://cdn.shopify.com/s/files/1/1061/1924/products/Smiling_Emoji_with_Smiling_Eyes_large.png?v=1480481060", first_name:"Blair", last_name: "Carroll")
+blair = User.create(username: "bcarroll", password: "cookies", email: "bc123@gmail.com", image: "blair.jpeg", first_name:"Blair", last_name: "Carroll")
 
 occassion1 = Occasion.create(name: "Sport")
 occassion2 = Occasion.create(name: "Casual")
@@ -151,16 +152,3 @@ acc12 = Piece.create(name: "Jaguar Cuff Links", color: "Gold", image: "acc12.jpg
 acc13 = Piece.create(name: "Sunglasses", color: "Black", image: "acc13.jpg", category_id: 7, user_id: 2)
 acc14 = Piece.create(name: "Silk Tie", color: "Grey", image: "acc14.jpg", category_id: 7, user_id: 2)
 acc15 = Piece.create(name: "Bow Tie", color: "Navy", image: "acc15.jpg", category_id: 7, user_id: 2)
-
-
-# outfit1 = Outfit.create(name: "Gym", rating: 5, occasion_id: 1)
-# outfit2 = Outfit.create(name: "Sunday Outfit", rating: 2, occasion_id: 2)
-# outfit3 = Outfit.create(name: "Friday Work Day", rating: 4, occasion_id: 3)
-# outfit4 = Outfit.create(name: "Tacky Christmas", rating: 5, occasion_id: 5)
-# outfit5 = Outfit.create(name: "Best Friend's Wedding", rating: 5, occasion_id: 7) 
-
-# outfit6 = Outfit.create(name: "Interview", rating: 4, occasion_id: 4)
-# outfit7 = Outfit.create(name: "Halloween", rating: 3, occasion_id: 5)
-# outfit8 = Outfit.create(name: "Date Night", rating: 2, occasion_id: 6)
-# outfit9 = Outfit.create(name: "Gala Benefit", rating: 5, occasion_id: 7)
-# outfit10 = Outfit.create(name: "Athleisure", rating: 4, occasion_id: 2)

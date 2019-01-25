@@ -32,3 +32,9 @@
 a.nav-item {
   padding: 4px;
 }
+
+.item {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
