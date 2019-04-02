@@ -1,7 +1,7 @@
 [Demo Here](https://some-link.com)
 
 ## DRESSD
-Keep track of all of your clothes, outfits, and accessories with this easy to use web application. Upload picture files of clothing items and sort them by occassion, color, and type. Make and save outfits to reference for a later date.
+Keep track of all of your clothes, outfits, and accessories with this easy to use web application. Upload picture files of clothing items and sort them by occasion, color, and type. Make and save outfits to reference for a later date.
 
 ### `Built With`
 Built with React and Ruby on Rails using RESTful MVC conventions and CRUD capabilties. <br/>
