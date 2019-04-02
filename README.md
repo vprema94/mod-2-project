@@ -1,26 +1,18 @@
-# mod-2-project
-Closet Application for Module 2
+[Demo Here](https://some-link.com)
 
--	Users have:
-  o	overall clothing – clothing “index”
+## DRESSD
+Keep track of all of your clothes, outfits, and accessories with this easy to use web application. Upload picture files of clothing items and sort them by occassion, color, and type. Make and save outfits to reference for a later date.
 
+### `Built With`
+Built with React and Ruby on Rails using RESTful MVC conventions and CRUD capabilties. <br/>
+Integrated Active Record Storage for users to upload photos of clothing items and accessories. <br/>
+Persisted user’s caught Pokémon in backend using Ruby on Rails and PostGresSQL. <br/>
+Created responsive user interface using complex Semantic UI React components. <br/>
 
--	Users can:
-  o	add new clothing 
-  o	create new outfits
+### `Requirements`
+Ruby 2.3.3 <br/>
 
-  o	edit outfits
-    
- 
-
--	User Login
-
--	Cool ass CSS
-
- o	outfit page sorted by occasion
-  o	delete clothing
-  o	delete outfits
-
-  
-  o	wear outfits (up clean_lvl count)*** 
-    ♣	*** not sure best way to execute… 
+### `Installation`
+bundle install <br/>
+rake db:migrate <br/>
+rails s <br/>
