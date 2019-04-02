@@ -6,7 +6,7 @@ Keep track of all of your clothes, outfits, and accessories with this easy to us
 ### `Built With`
 Built with React and Ruby on Rails using RESTful MVC conventions and CRUD capabilties. <br/>
 Integrated Active Record Storage for users to upload photos of clothing items and accessories. <br/>
-Persisted user’s caught Pokémon in backend using Ruby on Rails and PostGresSQL. <br/>
+Persisted user’s caught Pokémon in backend using Ruby on Rails and SQLite. <br/>
 Created responsive user interface using complex Semantic UI React components. <br/>
 
 ### `Requirements`
