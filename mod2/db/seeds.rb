@@ -3,6 +3,8 @@ vanessa = User.create(username: "vprema", password: "maximus1", email: "vprema94
 
 blair = User.create(username: "bcarroll", password: "cookies", email: "bc123@gmail.com", image: "blair.jpeg", first_name:"Blair", last_name: "Carroll")
 
+sarah = User.create(username: "syun", password: "crayon", email: "syun@gmail.com", image: "sarah.jpg", first_name:"Sarah", last_name: "Yun")
+
 occassion1 = Occasion.create(name: "Sport")
 occassion2 = Occasion.create(name: "Casual")
 occassion3 = Occasion.create(name: "Business Casual")

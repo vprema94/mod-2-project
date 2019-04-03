@@ -60,7 +60,7 @@
           <div class="piece-container">
             <h3>Your Coats & Jackets:</h3>
             <div class='type-container'>
-              <% @dr.each do |item| %>
+              <% @cj.each do |item| %>
                 <div class='piece-card'>
                   <%= image_tag(item.image, height: 200) %>
                   <h4> <%= link_to(item.name, piece_path(item)) %> (<%= item.color %>) </h4>
