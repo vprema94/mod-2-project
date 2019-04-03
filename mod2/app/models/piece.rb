@@ -6,7 +6,6 @@ class Piece < ApplicationRecord
 
   validates :name, presence: true
 
-
   def self.colors
     arr = self.all.map do |piece|
       piece.color 

@@ -3,8 +3,10 @@
 <% end %>
 
 <%= form_tag(login_path) do %>
-username: <%= text_field_tag("username") %>
-password: <%= password_field_tag("password") %>
-<%= submit_tag("Login") %>
+<h4>Username:</h4>
+<%= text_field_tag("username") %><br /><br />
+<h4>Password:</h4>
+<%= password_field_tag("password") %><br /><br />
+<%= submit_tag("Login", :class =>"btn btn-primary") %>
 <% end %> <br>
-<%= link_to("Cancel", root_path, :class =>"btn btn-primary")%>
+<%= link_to("Cancel", root_path)%>

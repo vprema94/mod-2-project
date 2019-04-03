@@ -8,12 +8,14 @@
 
     <body>
         <div class="container">
-          <% @outfits.each do |outfit| %>
-          <h4> <%= link_to(outfit.name, outfit_path(outfit)) %> (<%=outfit.occasion.name%>) </h4>
-              <% outfit.pieces.each do |piece| %>
-                <%= image_tag(piece.image, height: 200) %>
-              <% end %> 
-          <% end %>
+            <% @outfits.each do |outfit| %>
+                <div class="outfit-card">
+                    <h4> <%= link_to(outfit.name, outfit_path(outfit)) %> (<%=outfit.occasion.name%>) </h4>
+                    <% outfit.pieces.each do |piece| %>
+                        <%= image_tag(piece.image, height: 200) %>
+                    <% end %> 
+                </div>
+            <% end %>
         </div> 
     </body>
 </html>

@@ -1,27 +1,19 @@
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Welcome to your awesome closet!</h1>
-    <p class="lead">
-      <% if session[:user_id] %>
-      <h4>Love yourself</h4>
-      <% else %>
-      <h4>Sign in to pick or create an outfit!</h4>
-      <% end %>
-    </p>
+<div id="bg" class="jumbotron jumbotron-fluid"></div>
+<div class="jumbotron" id='welcome-header'>
+  <h1 class="display-4">Welcome to Dressd</h1>
+  <h2>A place to keep track of all your clothes!</h2>
 
-    <% if session[:user_id] %>
-    <% nil %>
-    <% else %>
-    <%= link_to("Sign up", new_user_path) %>
-    <% end %>
+  <br/>
 
-    <% if session[:user_id] %>
-    <h4> Welcome back, <%= current_user.username %> </h4>
-    <%= link_to "Logout", logout_path, :method => 'delete' %>
-    <% else %>
-    <%= link_to("Login", login_path, :class => "btn btn-primary") %>
-    <% end %>
-  </div>
+  <% if session[:user_id] %>
+  <% nil %>
+  <% else %>
+  <%= link_to("Sign up", new_user_path, :class => "btn btn-primary", :id => "welcome-btn") %>
+  <% end %>
+
+  <% if session[:user_id] %>
+  <h5> Not <%= current_user.username %>? <%= link_to "Logout", logout_path, :method => 'delete' %></h5>
+  <% else %>
+  <%= link_to("Login", login_path) %>
+  <% end %>
 </div>
-
-    <img src="assets/closet.jpg" class="img-fluid" alt="Responsive image">

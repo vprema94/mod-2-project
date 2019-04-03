@@ -1,27 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">We love your wardrobe!</h1>
-        <p class="lead">
-          <%= @user.first_name.capitalize + " " + @user.last_name.capitalize %>
-        </p>
+      <div id="bg" class="jumbotron jumbotron-fluid">
       </div>
-    </div>
 
     </head>
 
     <body>
-        <div class="container">
-            <br>
-            <%= image_tag(@user.image, height: 300) %>
-            <br><br>
-            <h4> Username: <%= @user.username %> </h4>
-            <br>
-            <h4> Email: <%= @user.email %> </h4>
-            <br>
-            <%= link_to 'Edit Account', edit_user_path(current_user), :class => "btn btn-primary" %>
+        <div class="container" id="profile-container">
+            <%= image_tag(@user.image, height: 350) %>
+            <div class="container" id='profile-info'>
+              <h4> Username: <%= @user.username %> </h4>
+              <br/>
+              <h4> Email: <%= @user.email %> </h4>
+              <%= link_to 'Edit Account', edit_user_path(current_user), :class => "btn btn-primary", :id => "profile-btn" %>
+            </div>
         </div>
     </body>
 </html>

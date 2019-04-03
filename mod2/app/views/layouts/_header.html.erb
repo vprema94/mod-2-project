@@ -1,45 +1,46 @@
-<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+<nav class="navbar navbar-light" style="background-color: #f2d1bc;">
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <br/>
     <div class="navbar-nav">
 
       <% if session[:user_id] %>
-      <a class="nav-item nav-link" href="#"><%= link_to("Profile", user_path(current_user))%></a>
+      <a class="nav-item nav-link" href="#"><%= link_to("HOME", root_path, :class => "nav-text")%></a>
       <% else %>
       <% nil %>
       <% end %>
 
       <% if session[:user_id] %>
-      <a class="nav-item nav-link" href="#"><%= link_to("Add clothes", new_piece_path)%></a>
+      <a class="nav-item nav-link" href="#"><%= link_to("PROFILE", user_path(current_user), :class => "nav-text")%></a>
       <% else %>
       <% nil %>
       <% end %>
 
       <% if session[:user_id] %>
-      <a class="nav-item nav-link" href="#"><%= link_to("Create Outfit", new_outfit_path)%></a>
+      <a class="nav-item nav-link" href="#"><%= link_to("ADD CLOTHES", new_piece_path, :class => "nav-text")%></a>
       <% else %>
       <% nil %>
       <% end %>
 
       <% if session[:user_id] %>
-      <a class="nav-item nav-link" href="#"><%= link_to("Edit profile", edit_user_path(current_user))%></a>
+      <a class="nav-item nav-link" href="#"><%= link_to("CREATE NEW OUTFIT", new_outfit_path, :class => "nav-text")%></a>
       <% else %>
       <% nil %>
       <% end %>
 
       <% if session[:user_id] %>
-      <a class="nav-item nav-link" href="#"><%= link_to("Your outfits", outfits_path(current_user))%></a>
+      <a class="nav-item nav-link" href="#"><%= link_to("YOUR CLOSET", pieces_path, :class => "nav-text")%></a>
       <% else %>
       <% nil %>
       <% end %>
 
       <% if session[:user_id] %>
-      <a class="nav-item nav-link" href="#"><%= link_to("Your closet", pieces_path)%></a>
+      <a class="nav-item nav-link" href="#"><%= link_to("YOUR OUTFITS", outfits_path(current_user), :class => "nav-text")%></a>
       <% else %>
       <% nil %>
       <% end %>
 
       <% if session[:user_id] %>
-      <a class="nav-item nav-link" href="#"><%= link_to("Home", root_path)%></a>
+      <a class="nav-item nav-link" href="#"><%= link_to("LOGOUT",  logout_path, :method => 'delete', :class => "nav-text")%></a>
       <% else %>
       <% nil %>
       <% end %>
