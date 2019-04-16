@@ -1,4 +1,4 @@
-[Demo Here](https://some-link.com)
+[Demo Here](https://www.dropbox.com/s/hf4e8wke4hcdlux/Dressd-Demo.mov?dl=0)
 
 ## DRESSD
 Keep track of all of your clothes, outfits, and accessories with this easy to use web application. Upload picture files of clothing items and sort them by occasion, color, and type. Make and save outfits to reference for a later date.
